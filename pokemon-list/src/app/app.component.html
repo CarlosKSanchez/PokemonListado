@@ -1,4 +1,10 @@
-<li *ngFor="let item of sprites">
-  <h3>{{item.nombre}}</h3>
-  <img src="{{item.sprite}}" />
-</li>
+  <mat-grid-list cols="3" >
+    <mat-grid-tile *ngFor="let item of sprites">
+      <mat-card class="Pokemon">    
+        <mat-card-header>
+            <mat-card-title>{{item.nombre}}</mat-card-title>	
+        </mat-card-header>
+        <img mat-card-image src="{{item.sprite}}" />
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
